@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://c7tr8fb6bgioo"]
+
+[ext_resource type="Script" uid="uid://bx0xe548gm2fg" path="res://scripts/ground.gd" id="1_mi8v4"]
+[ext_resource type="Texture2D" uid="uid://cj7uj6b8kkyd7" path="res://assets/textures/ground.png" id="2_lmksl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w5yvf"]
+size = Vector2(504.0323, 164.90186)
+
+[sub_resource type="Animation" id="Animation_mi8v4"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_lmksl"]
+resource_name = "scroll"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-216, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_w5yvf"]
+_data = {
+&"RESET": SubResource("Animation_mi8v4"),
+&"scroll": SubResource("Animation_lmksl")
+}
+
+[node name="Ground" type="StaticBody2D" unique_id=1429851123]
+script = ExtResource("1_mi8v4")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1592411212]
+texture_repeat = 2
+texture = ExtResource("2_lmksl")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 800, 168)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=602303912]
+position = Vector2(251.98386, 85.53038)
+shape = SubResource("RectangleShape2D_w5yvf")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1355233066]
+libraries/ = SubResource("AnimationLibrary_w5yvf")
+autoplay = &"scroll"

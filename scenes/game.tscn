@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://csxx12lrd6u81" path="res://assets/textures/background.png" id="1_uwrxv"]
 [ext_resource type="PackedScene" uid="uid://cbtbyhcy1ypti" path="res://scenes/player.tscn" id="2_yqjtg"]
+[ext_resource type="PackedScene" uid="uid://c7tr8fb6bgioo" path="res://scenes/ground.tscn" id="3_lnu2h"]
 
 [node name="Game" type="Node2D" unique_id=1671869867]
 
@@ -12,3 +13,6 @@ metadata/_edit_lock_ = true
 
 [node name="Player" parent="." unique_id=551819727 instance=ExtResource("2_yqjtg")]
 position = Vector2(73, 364)
+
+[node name="Ground" parent="." unique_id=1429851123 instance=ExtResource("3_lnu2h")]
+position = Vector2(0, 686)
