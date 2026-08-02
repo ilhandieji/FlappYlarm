@@ -1,3 +1,10 @@
 [gd_scene format=3 uid="uid://c3w5vpfpdtb3j"]
 
+[ext_resource type="Texture2D" uid="uid://csxx12lrd6u81" path="res://assets/textures/background.png" id="1_uwrxv"]
+
 [node name="Game" type="Node2D" unique_id=1671869867]
+
+[node name="Background" type="Sprite2D" parent="." unique_id=1430614507]
+texture = ExtResource("1_uwrxv")
+centered = false
+metadata/_edit_lock_ = true
