@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://c3w5vpfpdtb3j"]
 
 [ext_resource type="Texture2D" uid="uid://csxx12lrd6u81" path="res://assets/textures/background.png" id="1_uwrxv"]
+[ext_resource type="PackedScene" uid="uid://cbtbyhcy1ypti" path="res://scenes/player.tscn" id="2_yqjtg"]
 
 [node name="Game" type="Node2D" unique_id=1671869867]
 
@@ -8,3 +9,6 @@
 texture = ExtResource("1_uwrxv")
 centered = false
 metadata/_edit_lock_ = true
+
+[node name="Player" parent="." unique_id=551819727 instance=ExtResource("2_yqjtg")]
+position = Vector2(73, 364)
