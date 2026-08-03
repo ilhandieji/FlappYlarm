@@ -11,7 +11,7 @@
         <b>ilhandieji</b>
       </a>
       <br>
-      🎮 Programming / Godot
+      Programming / Godot
     </td>
     <td align="center">
       <a href="https://github.com/ZayFeng">
@@ -20,7 +20,7 @@
         <b>ZayFeng</b>
       </a>
       <br>
-      🎨 Art / Designer
+      Art / Designer
     </td>
   </tr>
 </table>
