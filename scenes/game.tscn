@@ -1,22 +1,31 @@
 [gd_scene format=3 uid="uid://c3w5vpfpdtb3j"]
 
+[ext_resource type="Script" uid="uid://bewph7xti5on3" path="res://scripts/game.gd" id="1_iywne"]
 [ext_resource type="Texture2D" uid="uid://csxx12lrd6u81" path="res://assets/textures/background.png" id="1_uwrxv"]
+[ext_resource type="PackedScene" uid="uid://ctn1qj8xgb5y3" path="res://scenes/hud.tscn" id="2_p57ef"]
 [ext_resource type="PackedScene" uid="uid://cbtbyhcy1ypti" path="res://scenes/player.tscn" id="2_yqjtg"]
-[ext_resource type="PackedScene" uid="uid://cscldciu8ncb" path="res://scenes/obstacle.tscn" id="3_lbhrr"]
+[ext_resource type="PackedScene" uid="uid://cdfghqrv5fqic" path="res://scenes/obstacle_spawner.tscn" id="3_iywne"]
 [ext_resource type="PackedScene" uid="uid://c7tr8fb6bgioo" path="res://scenes/ground.tscn" id="3_lnu2h"]
 
 [node name="Game" type="Node2D" unique_id=1671869867]
+script = ExtResource("1_iywne")
+
+[node name="HUD" parent="." unique_id=181784725 instance=ExtResource("2_p57ef")]
 
 [node name="Background" type="Sprite2D" parent="." unique_id=1430614507]
 texture = ExtResource("1_uwrxv")
 centered = false
 metadata/_edit_lock_ = true
 
-[node name="Player" parent="." unique_id=551819727 instance=ExtResource("2_yqjtg")]
-position = Vector2(73, 364)
-
-[node name="Obstacle" parent="." unique_id=1090915699 instance=ExtResource("3_lbhrr")]
-position = Vector2(439, 370)
+[node name="ObstacleSpawner" parent="." unique_id=1811347837 instance=ExtResource("3_iywne")]
+position = Vector2(700, 400)
 
 [node name="Ground" parent="." unique_id=1429851123 instance=ExtResource("3_lnu2h")]
 position = Vector2(0, 686)
+
+[node name="Player" parent="." unique_id=551819727 instance=ExtResource("2_yqjtg")]
+position = Vector2(73, 397)
+
+[connection signal="died" from="Player" to="." method="_on_player_died"]
+[connection signal="game_started" from="Player" to="." method="_on_player_game_started"]
+[connection signal="scored" from="Player" to="." method="_on_player_scored"]

@@ -11,9 +11,11 @@ func _physics_process(delta: float) -> void:
 
 func _on_pipe_body_entered(body: Node2D) -> void:
 	if body is Player:
-		print("something")
-
+		body.die()
 
 func _on_score_area_body_entered(body: Node2D) -> void:
 	if body is Player:
-		print("nothing")
+		body.score_point()
+
+func stop() -> void:
+	speed = 0.0

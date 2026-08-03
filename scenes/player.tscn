@@ -2,6 +2,9 @@
 
 [ext_resource type="Script" uid="uid://bstpb4sqg8ivb" path="res://scripts/player.gd" id="1_g2els"]
 [ext_resource type="Texture2D" uid="uid://cca18xmq882s0" path="res://assets/textures/bird.png" id="2_qhqgy"]
+[ext_resource type="AudioStream" uid="uid://b7ryyu5b3ydoe" path="res://assets/audio/wing.wav" id="3_qhqgy"]
+[ext_resource type="AudioStream" uid="uid://bppdc4n8dj510" path="res://assets/audio/hit.wav" id="4_qlg0r"]
+[ext_resource type="AudioStream" uid="uid://dnpb0bncsgjt5" path="res://assets/audio/point.wav" id="5_tuyoq"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_g2els"]
 radius = 17.888544
@@ -115,3 +118,12 @@ shape = SubResource("CircleShape2D_g2els")
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2118299808]
 libraries/ = SubResource("AnimationLibrary_tuyoq")
 autoplay = &"idle"
+
+[node name="FlapSound" type="AudioStreamPlayer" parent="." unique_id=331147521]
+stream = ExtResource("3_qhqgy")
+
+[node name="HitSound" type="AudioStreamPlayer" parent="." unique_id=465669818]
+stream = ExtResource("4_qlg0r")
+
+[node name="ScoreSound" type="AudioStreamPlayer" parent="." unique_id=1325411312]
+stream = ExtResource("5_tuyoq")

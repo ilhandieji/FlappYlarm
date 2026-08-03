@@ -41,7 +41,7 @@ texture = ExtResource("2_cjuko")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PipeBottom" unique_id=1127589602]
 shape = SubResource("RectangleShape2D_c2epm")
 
-[node name="ScoreArea" type="Area2D" parent="." unique_id=299740185]
+[node name="ScoreArea" type="Area2D" parent="." unique_id=299740185 groups=["obstacles"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ScoreArea" unique_id=1235979865]
 position = Vector2(32.5, 0)
