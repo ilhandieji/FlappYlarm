@@ -49,4 +49,4 @@ See:
 
 Asset license:
 
-[CC-BY-SA-4.0](CC-BY-SA-4.0)
+[CC-BY-SA-4.0](https://github.com/ilhandieji/FlappYlarm/blob/215dca71ae1a4d89817d9f8fb00e536f0cb761a5/ASSETS_LICENSE)
