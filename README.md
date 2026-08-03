@@ -24,3 +24,29 @@
     </td>
   </tr>
 </table>
+
+## License
+
+### Source Code
+
+The source code of FlappYlarm is licensed under the GNU General Public License v3.0.
+
+See:
+
+[LICENSE](LICENSE)
+
+
+### Visual Assets
+
+The visual assets located in:
+[assets/textures](https://github.com/ilhandieji/FlappYlarm/tree/a7975cf97dcf10453a3cb0af1b377a7899024b93/assets/textures)
+
+are licensed under Creative Commons Attribution-ShareAlike 4.0 International.
+
+See:
+
+[ASSETS.md](ASSETS.md)
+
+Asset license:
+
+[CC-BY-SA-4.0](CC-BY-SA-4.0)
